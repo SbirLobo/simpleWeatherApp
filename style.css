@@ -1,0 +1,54 @@
+:root {
+  --green: #007f73;
+  --light_green: #4ccd99;
+  --light_orange: #ffc700;
+  --yellow: #fff455;
+  /* to use : var(--green) */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--yellow);
+}
+
+h1 {
+  text-align: center;
+  margin: 10px;
+  background-color: var(--green);
+}
+
+#resultats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+p {
+  margin: 10px;
+  background-color: var(--light_green);
+  color: black;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  background-color: var(--light_orange);
+}
+
+/* Media Queries */
+/* @media screen and (max-width: 768px) {
+  img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  img {
+    width: 30px;
+    height: 30px;
+  }
+} */

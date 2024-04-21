@@ -15,7 +15,6 @@ function callAPI() {
     .then((response) => response.json())
     .then((data) => {
       findApiData(data.city.name);
-      console.log(data.city.name);
     })
     .catch((error) => {
       console.error(
@@ -32,7 +31,6 @@ function findApiData(city) {
     .then((response) => response.json())
     .then((data) => {
       showResults(data);
-      console.log(data);
     })
     .catch((error) => {
       console.error(
@@ -57,10 +55,12 @@ function showResults(data) {
   // création du contenu html
   const texte = document.createElement("p");
   texte.textContent = `Ville : ${data.name}, Météo : ${data.weather[0].description}`;
+  texte.classList.add("result-text");
   container.appendChild(texte);
 
   const image = document.createElement("img");
   image.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
   image.alt = "Icône météo";
+  image.classList.add("weather-icon");
   container.appendChild(image);
 }
