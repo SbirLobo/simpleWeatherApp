@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // récupérer le nom de la ville depuis le conf.json
 function callAPI() {
-  fetch("conf.json")
+  fetch("../conf.json")
     .then((response) => response.json())
     .then((data) => {
       findApiData(data.city.name);
