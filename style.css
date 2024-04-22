@@ -3,7 +3,8 @@
   --light_green: #4ccd99;
   --light_orange: #ffc700;
   --yellow: #fff455;
-  /* to use : var(--green) */
+  --light_yellow: #fff67c;
+  /* example of use : var(--green) */
 }
 
 body {
@@ -12,44 +13,104 @@ body {
   padding: 0;
   color: var(--yellow);
   background-color: var(--green);
+  display: flex;
+  justify-content: center;
 }
 
 h1 {
   text-align: center;
   margin: 10px;
   background-color: var(--green);
-}
-
-#resultats {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px;
+  font-size: 4rem;
 }
 
 p {
-  margin: 10px;
+  margin: 0px;
   background-color: var(--light_green);
   color: black;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: var(--green);
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 img {
   width: 100px;
   height: 100px;
   background-color: var(--light_orange);
+  border: 5px solid;
+  border-color: var(--green);
+  margin: 5px;
+  border-radius: 25%;
+}
+
+.bg-light-green{
+  background-color: var(--light_green);
+}
+
+.verticalFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.horizontalFlex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.box {
+  border: 5px solid;
+  border-color: var(--yellow);
+}
+
+.mainbox {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.temp {
+  color: var(--light_yellow);
+  font-size: 4rem;
+}
+
+.tempMinMax {
+  color: var(--light_yellow)
 }
 
 /* Media Queries */
-/* @media screen and (max-width: 768px) {
-  img {
-    width: 50px;
-    height: 50px;
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .temp {
+    font-size: 3rem;
   }
 }
 
 @media screen and (max-width: 480px) {
-  img {
-    width: 30px;
-    height: 30px;
+  h1 {
+    font-size: 2.5rem;
   }
-} */
+
+  p {
+    font-size: 1rem;
+  }
+
+  .temp {
+    font-size: 2.5rem;
+  }
+}
