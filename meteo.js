@@ -42,25 +42,40 @@ function findApiData(city) {
 
 // gestion du DOM
 function showResults(data) {
-  const container = document.getElementById("resultats");
-  if (!container) {
+  const city = document.getElementById("city");
+  const temp = document.getElementById("temp");
+  const tempMin = document.getElementById("tempMin");
+  const tempMax = document.getElementById("tempMax");
+  const humidity = document.getElementById("humidity");
+  const description = document.getElementById("description");
+  ;const weatherIcon = document.getElementById("weatherIcon")
+
+  if (!city || !temp || !tempMin || !tempMax || !humidity || !description || !weatherIcon) {
     console.error(
-      "L'élément avec l'identifiant 'resultats' n'a pas été trouvé."
+      "Erreur de reconnaissance du DOM."
     );
     return;
   }
   // effacer le contenu précédent après rechargment de la fonction callAPI
-  container.innerHTML = "";
+  city.innerHTML = "";
+  temp.innerHTML = "";
+  tempMin.innerHTML = "";
+  tempMax.innerHTML = "";
+  humidity.innerHTML = "";
+  description.innerHTML = "";
+  weatherIcon.innerHTML = "";
 
   // création du contenu html
-  const texte = document.createElement("p");
-  texte.textContent = `Ville : ${data.name}, Météo : ${data.weather[0].description}`;
-  texte.classList.add("result-text");
-  container.appendChild(texte);
+  const city_text = document.createElement("h1");
+  city_text.textContent = `${data.name} Météo`;
+  city.appendChild(city_text);
 
-  const image = document.createElement("img");
-  image.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
-  image.alt = "Icône météo";
-  image.classList.add("weather-icon");
-  container.appendChild(image);
+  temp.textContent = `${data.main.temp}°C`;
+  tempMin.textContent = `${data.main.temp_min}`;
+  tempMax.textContent = `${data.main.temp_max}`;
+  humidity.textContent = `Humidité : ${data.main.humidity}%`;
+  description.textContent = `${data.weather[0].description}`
+
+  weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`
+  weatherIcon.alt = "Icône météo";
 }

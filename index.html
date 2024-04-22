@@ -19,7 +19,23 @@
     <title>Simple weather app</title>
   </head>
   <body>
-    <h1>Votre météo</h1>
-    <div id="resultats"></div>
+    <div class="mainbox">
+    <div class="verticalFlex box">
+      <div id="city">
+      </div>
+      <div class="verticalFlex box">
+        <p class="temp" id="temp"></p>
+        <div class="horizontalFlex">
+          <p>Min: <span class="tempMinMax" id="tempMin">8.26</span>°</p>
+          <p>Max: <span class="tempMinMax" id="tempMax">10.88</span>°</p>
+        </div>
+        <p id="humidity"></p>
+      </div>
+      <div class="verticalFlex bg-light-green">
+        <img id="weatherIcon" src="https://openweathermap.org/img/wn/04d.png" alt="">
+        <p id="description"></p>
+      </div>
+    </div>
+  </div>
   </body>
 </html>
