@@ -1,6 +1,6 @@
 # Application Météo pour les Transports en Commun
 
-![Capture d'écran de l'application](screenshot.png)
+![Capture d'écran de l'application](https://github.com/SbirLobo/simpleWeatherApp/assets/108263661/354c4267-4dff-4a64-ae77-18c8df614df7)
 
 ## Description
 
@@ -13,20 +13,21 @@ Avant d'utiliser l'application, veuillez configurer le fichier `conf.json` avec 
 
 Exemple de contenu du fichier `conf.json` :
 
-\```json
+```json
 {
-"city": {
-"name": "Paris"
+  "city": {
+    "name": "Paris"
+  }
 }
-}
-\```
+```
 
 ## Installation
 
 1. Clonez ce dépôt Git sur votre machine locale.
-2. Exécutez `npm i` pour installer les dépendances du projet.
-3. Configurez le fichier `conf.json` avec les informations de la ville souhaitée.
-4. Exécutez `npx vite` pour lancer l'application en mode développement.
+2. Créez un fichier .env conforme au fichier .env.sample en insérant votre clé OpenWeather (https://openweathermap.org/appid)
+3. Exécutez `npm i` pour installer les dépendances du projet.
+4. Configurez le fichier `conf.json` avec les informations de la ville souhaitée.
+5. Exécutez `npx vite` pour lancer l'application en mode développement.
 
 ## Fonctionnalités
 
